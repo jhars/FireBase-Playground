@@ -27,6 +27,12 @@ class MainViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
 //        cell.textLabel!.text = self.posts[indexPath.row]
+        var keys: Array = Array(self.posts.keys)
+        cell.textLabel?.text = posts[keys[indexPath.row]] as String!
+        //myArray[0]
+        //myDictionary["firstObject"]
+        
+        
         return cell
     }
     
@@ -35,10 +41,13 @@ class MainViewController: UITableViewController {
         
         ref.observeEventType(.Value, withBlock: { snapshot in
             
-            print(snapshot.value.objectForKey("Posts"))
-            
+            // * SAVE THIS * //
+//            print(snapshot.value.objectForKey("Posts"))
             self.posts = snapshot.value.objectForKey("Posts") as! [String: String]
             print(self.posts)
+//            var key = Array(self.posts.keys)[0]
+//            print(key)
+            self.tableView.reloadData()
         
         })
     }
