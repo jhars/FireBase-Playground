@@ -155,6 +155,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="postTextField" destination="LG9-Hr-9qL" id="R7k-nw-MsD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGG-aT-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

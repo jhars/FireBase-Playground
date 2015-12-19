@@ -73,6 +73,8 @@ class ViewController: UIViewController {
                                             "email": authData.providerData["email"] as? NSString as? String
                             ]
                             
+// ===== BREAKING POINT =========== //
+                            
                             let fakePost = [
                             
                                 "\(NSDate())" : "this is my 1st fake post"

@@ -358,6 +358,7 @@
 				923A2DFD1C24E8C60016950A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
