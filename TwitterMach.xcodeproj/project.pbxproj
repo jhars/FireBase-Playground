@@ -19,6 +19,7 @@
 		923A2E0A1C24EE750016950A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A2E091C24EE750016950A /* CFNetwork.framework */; };
 		923A2E0C1C24EE7F0016950A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A2E0B1C24EE7F0016950A /* Security.framework */; };
 		923A2E0E1C2516C10016950A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A2E0D1C2516C10016950A /* MainViewController.swift */; };
+		923A2E151C2529230016950A /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A2E141C2529230016950A /* AddTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		923A2E091C24EE750016950A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		923A2E0B1C24EE7F0016950A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		923A2E0D1C2516C10016950A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		923A2E141C2529230016950A /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				923A2E0D1C2516C10016950A /* MainViewController.swift */,
 				923A2DEE1C24E8C60016950A /* ViewController.swift */,
+				923A2E141C2529230016950A /* AddTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				923A2E0E1C2516C10016950A /* MainViewController.swift in Sources */,
 				923A2DEF1C24E8C60016950A /* ViewController.swift in Sources */,
 				923A2DED1C24E8C60016950A /* AppDelegate.swift in Sources */,
+				923A2E151C2529230016950A /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

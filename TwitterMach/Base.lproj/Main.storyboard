@@ -54,42 +54,111 @@
                     <connections>
                         <outlet property="emailTextField" destination="tYi-CS-BAR" id="d2p-Fp-0iQ"/>
                         <outlet property="passwordTextField" destination="xkz-tj-l8t" id="9bH-x2-hU9"/>
-                        <segue destination="iS5-TH-2aX" kind="modal" identifier="loginAndSignUpComplete" id="aAL-ur-RqI"/>
+                        <segue destination="TBN-q0-jiB" kind="modal" identifier="loginAndSignUpComplete" id="CUQ-uc-G5F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1278" y="344"/>
+            <point key="canvasLocation" x="1263" y="344"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="Hgf-qE-nOU">
+        <!--Twitter Mach-->
+        <scene sceneID="ZDB-TH-9AP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tGS-ld-gC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="iS5-TH-2aX" customClass="MainViewController" customModule="TwitterMach" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gD0-Pp-zef"/>
-                        <viewControllerLayoutGuide type="bottom" id="xa7-KF-pR9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p4F-cP-g37">
+                <tableViewController id="gmy-2k-JO5" customClass="MainViewController" customModule="TwitterMach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="o0r-Cw-hh3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saC-Qy-hwE">
-                                <rect key="frame" x="253" y="28" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logout:" destination="iS5-TH-2aX" eventType="touchUpInside" id="Xt2-ml-tEA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.81940518510000004" blue="0.30906836450000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ezO-nV-yM0" rowHeight="75" style="IBUITableViewCellStyleDefault" id="kmS-r0-GDb">
+                                <rect key="frame" x="0.0" y="92" width="320" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kmS-r0-GDb" id="jeL-JE-4or">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" id="ezO-nV-yM0">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gmy-2k-JO5" id="ayS-Wz-rXe"/>
+                            <outlet property="delegate" destination="gmy-2k-JO5" id="gsq-8P-YIJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Twitter Mach" id="coY-HV-lyj">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="7hB-x0-dMO">
+                            <connections>
+                                <action selector="logout:" destination="gmy-2k-JO5" id="vWP-FN-fJY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PPx-aW-xRT">
+                            <connections>
+                                <segue destination="7bT-OO-R6k" kind="push" id="K5g-X3-D9h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="K2n-tF-JfX" kind="modal" identifier="logoutSegue" id="SNR-ST-hma"/>
+                        <segue destination="K2n-tF-JfX" kind="modal" identifier="logoutSegue" id="wQn-kr-bjt"/>
                     </connections>
-                </viewController>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dlk-o7-9au" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="349"/>
+            <point key="canvasLocation" x="1997" y="344"/>
+        </scene>
+        <!--New Post-->
+        <scene sceneID="Qhp-hk-Dqd">
+            <objects>
+                <tableViewController id="7bT-OO-R6k" customClass="AddTableViewController" customModule="TwitterMach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZx-EY-0FC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="rSc-cg-krW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fJj-Vv-Hpi">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fJj-Vv-Hpi" id="v5k-40-xDG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compose Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-Hr-9qL">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="7bT-OO-R6k" id="9VV-Kf-djy"/>
+                            <outlet property="delegate" destination="7bT-OO-R6k" id="s7Y-aT-jyt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Post" id="mTE-v0-laJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="v7k-dd-mgz">
+                            <connections>
+                                <action selector="done:" destination="7bT-OO-R6k" id="5Mx-6l-2VH"/>
+                                <segue destination="gmy-2k-JO5" kind="push" identifier="finishAddingMessage" id="XwA-Aq-RFa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGG-aT-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2415" y="344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wma-ps-IPG">
@@ -107,7 +176,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE7-v6-JCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="344"/>
+            <point key="canvasLocation" x="914" y="344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ceE-hd-zzd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TBN-q0-jiB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rxH-Vi-1Tc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gmy-2k-JO5" kind="relationship" relationship="rootViewController" id="Hyv-Lr-eYl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68J-2y-A2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="344"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XwA-Aq-RFa"/>
+    </inferredMetricsTieBreakers>
 </document>
