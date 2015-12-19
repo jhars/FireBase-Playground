@@ -18,6 +18,7 @@
 		923A2E081C24EE680016950A /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A2E061C24EE680016950A /* libicucore.A.dylib */; };
 		923A2E0A1C24EE750016950A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A2E091C24EE750016950A /* CFNetwork.framework */; };
 		923A2E0C1C24EE7F0016950A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A2E0B1C24EE7F0016950A /* Security.framework */; };
+		923A2E0E1C2516C10016950A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A2E0D1C2516C10016950A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +29,14 @@
 		923A2DF31C24E8C60016950A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		923A2DF61C24E8C60016950A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923A2DF81C24E8C60016950A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		923A2DFE1C24E9220016950A /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		923A2DFE1C24E9220016950A /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = TwitterMach/Firebase.framework; sourceTree = "<group>"; };
 		923A2E001C24ECDF0016950A /* TwitterMach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterMach-Bridging-Header.h"; sourceTree = "<group>"; };
 		923A2E031C24EE560016950A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		923A2E051C24EE680016950A /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
 		923A2E061C24EE680016950A /* libicucore.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.A.dylib; path = ../libicucore.A.dylib; sourceTree = "<group>"; };
 		923A2E091C24EE750016950A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		923A2E0B1C24EE7F0016950A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		923A2E0D1C2516C10016950A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,7 @@
 		923A2DE01C24E8C60016950A = {
 			isa = PBXGroup;
 			children = (
-				923A2E0B1C24EE7F0016950A /* Security.framework */,
-				923A2E091C24EE750016950A /* CFNetwork.framework */,
-				923A2E051C24EE680016950A /* libc++.1.dylib */,
-				923A2E061C24EE680016950A /* libicucore.A.dylib */,
-				923A2E031C24EE560016950A /* SystemConfiguration.framework */,
+				923A2E101C25170A0016950A /* Libraries */,
 				923A2DEB1C24E8C60016950A /* TwitterMach */,
 				923A2DEA1C24E8C60016950A /* Products */,
 			);
@@ -78,16 +76,45 @@
 		923A2DEB1C24E8C60016950A /* TwitterMach */ = {
 			isa = PBXGroup;
 			children = (
-				923A2DFE1C24E9220016950A /* Firebase.framework */,
-				923A2DEC1C24E8C60016950A /* AppDelegate.swift */,
-				923A2DEE1C24E8C60016950A /* ViewController.swift */,
 				923A2DF01C24E8C60016950A /* Main.storyboard */,
+				923A2E111C2517420016950A /* ViewControllers */,
+				923A2E0F1C2516EF0016950A /* Support FIles */,
+			);
+			path = TwitterMach;
+			sourceTree = "<group>";
+		};
+		923A2E0F1C2516EF0016950A /* Support FIles */ = {
+			isa = PBXGroup;
+			children = (
+				923A2DEC1C24E8C60016950A /* AppDelegate.swift */,
 				923A2DF31C24E8C60016950A /* Assets.xcassets */,
 				923A2DF51C24E8C60016950A /* LaunchScreen.storyboard */,
 				923A2DF81C24E8C60016950A /* Info.plist */,
 				923A2E001C24ECDF0016950A /* TwitterMach-Bridging-Header.h */,
 			);
-			path = TwitterMach;
+			name = "Support FIles";
+			sourceTree = "<group>";
+		};
+		923A2E101C25170A0016950A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				923A2E0B1C24EE7F0016950A /* Security.framework */,
+				923A2E091C24EE750016950A /* CFNetwork.framework */,
+				923A2E051C24EE680016950A /* libc++.1.dylib */,
+				923A2E061C24EE680016950A /* libicucore.A.dylib */,
+				923A2E031C24EE560016950A /* SystemConfiguration.framework */,
+				923A2DFE1C24E9220016950A /* Firebase.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		923A2E111C2517420016950A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				923A2E0D1C2516C10016950A /* MainViewController.swift */,
+				923A2DEE1C24E8C60016950A /* ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A2E0E1C2516C10016950A /* MainViewController.swift in Sources */,
 				923A2DEF1C24E8C60016950A /* ViewController.swift in Sources */,
 				923A2DED1C24E8C60016950A /* AppDelegate.swift in Sources */,
 			);
