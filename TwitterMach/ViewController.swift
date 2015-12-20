@@ -66,7 +66,7 @@ class ViewController: UIViewController {
                             print(error)
                             print("there is an error with your data")
                         } else {
-                            var userID = authData.uid
+                            var userId = authData.uid
                             
                             let newUser = [
                                             "provider": authData.provider,

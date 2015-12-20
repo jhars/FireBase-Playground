@@ -69,6 +69,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="vD3-Jz-9xE">
+                            <rect key="frame" x="0.0" y="167" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.34970127514005866" green="0.80528116676322259" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ezO-nV-yM0" rowHeight="75" style="IBUITableViewCellStyleDefault" id="kmS-r0-GDb">
                                 <rect key="frame" x="0.0" y="92" width="320" height="75"/>
@@ -101,11 +108,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PPx-aW-xRT">
                             <connections>
-                                <segue destination="7bT-OO-R6k" kind="push" id="K5g-X3-D9h"/>
+                                <action selector="addMessage:" destination="gmy-2k-JO5" id="aP1-WJ-gXP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="msgInput" destination="vD3-Jz-9xE" id="AtP-eK-6dk"/>
                         <segue destination="K2n-tF-JfX" kind="modal" identifier="logoutSegue" id="wQn-kr-bjt"/>
                     </connections>
                 </tableViewController>
@@ -125,7 +133,7 @@
                             <tableViewSection id="rSc-cg-krW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fJj-Vv-Hpi">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fJj-Vv-Hpi" id="v5k-40-xDG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -150,13 +158,13 @@
                     <navigationItem key="navigationItem" title="New Post" id="mTE-v0-laJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="v7k-dd-mgz">
                             <connections>
-                                <action selector="done:" destination="7bT-OO-R6k" id="5Mx-6l-2VH"/>
-                                <segue destination="gmy-2k-JO5" kind="push" identifier="finishAddingMessage" id="XwA-Aq-RFa"/>
+                                <action selector="btnDone:" destination="7bT-OO-R6k" id="h4L-Qf-Rdi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="postTextField" destination="LG9-Hr-9qL" id="R7k-nw-MsD"/>
+                        <outlet property="composeTextField" destination="LG9-Hr-9qL" id="dvj-sN-6oZ"/>
+                        <segue destination="gmy-2k-JO5" kind="push" identifier="donePost" id="4Fy-Jh-gzc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGG-aT-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,6 +209,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XwA-Aq-RFa"/>
+        <segue reference="Hyv-Lr-eYl"/>
     </inferredMetricsTieBreakers>
 </document>
